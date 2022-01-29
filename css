@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;  
+}
+.back{
+background-image: url(./image1.jpeg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 65% 100%;
+top: -30px;
+left: -30px;
+width:  calc(87vw + 60px);
+height: calc(40vw + 60px);
+z-index: -50;
+filter: blur(30px);
+}
+.loading-text {
+font-size: 50px;
+color: red;
+position:absolute
+}
