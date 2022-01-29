@@ -1,0 +1,18 @@
+const back = document.querySelector('.back');
+const loading = document.querySelector('.loading-text')
+
+let load = 0;
+
+let int = setInterval(blurry, 20)
+function blurry(){
+    load++
+    loading.innerHTML= `${load}`
+   if(load > 99){
+       clearInterval(int)
+   }
+   loading.innerText= `${load}%`;
+   back.style.filter = `blur(${scale(load, 0,100,30,0)}px)`
+}
+const scale = (number, inMin, inMax, outMin, outMax) => {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
